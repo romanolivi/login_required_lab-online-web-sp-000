@@ -7,8 +7,8 @@ class SecretsController < ApplicationController
 
     private
  
-        def require_login
-            redirect_to "/" unless  session[:name]
-        end
+    def require_login
+        redirect_to "/" unless  session[:name]
+    end
 
 end

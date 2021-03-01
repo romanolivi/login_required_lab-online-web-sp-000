@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
     def create 
         if !params[:name].empty? && !params[:name].nil?
             session[:name] = params[:name]
+            redirect_to "/home"
         else 
             redirect_to '/'
         end
@@ -16,6 +17,7 @@ class SessionsController < ApplicationController
             session[:name] = nil
         else 
             session.delete :name 
+            redirect_to "/"
         end  
     end
 
